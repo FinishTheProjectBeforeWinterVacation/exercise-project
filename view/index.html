@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>AC教学辅助平台</title>
+  <link rel="stylesheet" href="../resource/layui/css/layui.css">
+  <style>
+	.load{
+		display:none !important;/*none*/
+	}
+	.unload{
+		display:block !important;
+	}
+  #container{
+    display: block;
+    overflow: hidden;
+    margin: 0 70px;
+  }
+  #input{
+    width: 100%;
+    background-color: #f7f7f7;
+    margin: 20px 20px;
+  }
+  .page{
+     display: inline-block;
+  }
+  </style>
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo">
+      <img src="../resource/logo.png" height="58px" />
+
+    </div>
+    <!-- 头部区域（可配合layui已有的水平导航）-->
+    <ul class="layui-nav layui-layout-left">
+      <li class="layui-nav-item"><a href="">模块1</a></li>
+      <li class="layui-nav-item"><a href="">模块2</a></li>
+      <li class="layui-nav-item"><a href="">模块3</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">其他</a>
+        <dl class="layui-nav-child">
+          <dd><a href="">邮件管理</a></dd>
+          <dd><a href="">消息管理</a></dd>
+          <dd><a href="">授权管理</a></dd>
+        </dl>
+      </li>
+    </ul>
+    <ul class="layui-nav layui-layout-right load">
+
+      <li class="layui-nav-item">
+        <a href="javascript:;">
+          <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+          用户名
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="">个人中心</a></dd>
+          <dd><a href="">安全设置</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="">退出</a></li>
+    </ul>
+
+  
+    <ul class="layui-nav layui-layout-right unload">
+        <div class="site-demo-button" id="layerDemo" style="margin-top:10px;">
+          <a  data-method="notice" class="layui-btn"> 登录</a> 
+          <a  href="register.html" class="layui-btn abc"> 注册 </a> 
+        </div>
+    </ul>
+
+   
+
+
+  </div>
+  
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+        <li class="layui-nav-item layui-nav-itemed">
+          <a class="" href="javascript:;">题库</a>
+          <dl class="layui-nav-child">
+            <dd><a href="">C语言</a></dd>
+            <dd><a href="javascript:;">数据结构</a></dd>
+            <dd><a href="javascript:;">算法</a></dd>
+            <dd><a href="">其他</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">小组1</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">题目集1</a></dd>
+            <dd><a href="javascript:;">题目集2</a></dd>
+            <dd><a href="">超链接</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">云市场</a></li>
+        <li class="layui-nav-item"><a href="">发布商品</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="layui-body">
+   <!-- 内容主体区域 -->
+    <div style="padding: 15px;">
+      <blockquote class="layui-elem-quote layui-text" >
+        <span style="color: cornflowerblue">xxxx题目集 </span> 
+     
+      <div class="page" style="float:right;margin-top:-8px;">
+          <button class="layui-btn">1</button>
+          <button class="layui-btn">2</button>
+          <button class="layui-btn">3</button>
+      </div>
+      </blockquote>        
+
+
+      <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+        <legend>7-27 冒泡法排序 （20 分）</legend>
+      </fieldset>
+    
+      <div id="container">
+
+        <!-- <p id="test111">11111</p> -->
+        <span style="letter-spacing:3px;font-size:15px;">
+          &emsp;&emsp;将N个整数按从小到大排序的冒泡排序法是这样工作的：从头到尾比较相邻两个元素，如果前面的元素大于其紧随的后面元素，则交换它们。通过一遍扫描，则最后一个元素必定是最大的元素。然后用同样的方法对前N−1个元素进行第二遍扫描。依此类推，最后只需处理两个元素，就完成了对N个数的排序。
+          本题要求对任意给定的K（&lt;N），输出扫描完第K遍后的中间结果数列。
+        </span>
+        <br/><br/><br/>
+        
+  
+
+        <h2>输入格式：</h2>
+        <div id="input">
+          输入在第1行中给出N和K（1≤K&lt;N≤100），在第2行中给出N个待排序的整数，数字间以空格分隔。
+        </div>
+    
+        <h2>输出格式：</h2>
+        <div id="input">
+          在一行中输出冒泡排序法扫描完第K遍后的中间结果数列，数字间以空格分隔，但末尾不得有多余空格。<br>
+        </div>
+
+        <hr/><br/>
+
+        <h3>输入样例：</h3>
+        <div id="input">
+          6<br>
+          2 3 5 1 6 4<br>
+        </div>
+
+        <h3>输出样例：</h3>
+        <div id="input">
+          2 1 3 4 5 6<br>
+        </div>
+        <br/>
+        
+      <!--  表单  -->
+      <form class="layui-form layui-form-pane" action="">
+        <div class="layui-form-item">
+          <label class="layui-form-label">选择编译器</label>
+          <div class="layui-input-inline">
+            <select name="bianjiqi">
+              <option value="gcc"> C ( gcc ) </option>
+            </select>
+          </div>
+      
+          
+        </div>
+        <div class="layui-form-item layui-form-text">
+          <label class="layui-form-label">Code</label>
+          <div class="layui-input-block">
+            <textarea name="code" placeholder="请输入内容" class="layui-textarea"  style="height:325px"></textarea>
+          </div>
+        </div>
+      
+          <div class="layui-form-item">
+              <div class="layui-input-block">
+                  <button class="layui-btn">立即提交</button>
+                  <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+              </div>
+          </div>
+      </form>
+
+      </div>
+
+      
+              
+    <script src="../resource/layui/layui.js" charset="utf-8"></script>
+    <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+    <script>
+    layui.use(['form', 'layedit', 'laydate'], function(){
+      var form = layui.form
+      ,layer = layui.layer
+      ,layedit = layui.layedit
+      ,laydate = layui.laydate;
+    });
+
+
+
+      
+    </script>
+
+
+
+     
+
+      
+      
+    
+    </div>
+  </div>
+  
+  <div class="layui-footer">
+     <!-- 底部固定区域 -->
+     © layui.com - 底部固定区域
+  </div>
+</div>
+<script src="../resource/layui/layui.js"></script>
+<script>
+//JavaScript代码区域
+layui.use('element', function(){
+  var element = layui.element;
+  
+});
+</script>
+
+
+//登录
+<script>
+    layui.use('layer', function(){ //独立版的layer无需执行这一句
+      var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+      
+      //触发事件
+      var active = {
+        notice: function(){
+          var that = this; 
+          //示范一个公告层
+          layer.open({
+            type: 1
+            ,title: false //不显示标题栏
+            ,closeBtn: false
+            ,shade: 0.8
+            ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+            ,btn: ['登&nbsp;&nbsp;&nbsp;&nbsp;录', '关&nbsp;&nbsp;&nbsp;&nbsp;闭']
+            ,btnAlign: 'c'
+            ,moveType: 1 //拖拽模式，0或者1
+            ,content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;"><img src="../resource/logo.png"height="50px" /><br/><br/><form>用户名：<br/><input type="text" name="title" required lay-verify="required" placeholder="用户名&nbsp;/&nbsp;手机号码" autocomplete="off" class="layui-input">  <br/>密码：<input type="password" name="title" required lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input"></form></div>'
+            ,success: function(layero){
+              var btn = layero.find('.layui-layer-btn');
+              btn.find('.layui-layer-btn0').attr({
+                href: 'http://www.baidu.com/'
+                ,target: '_blank'
+              });
+              btn.find('.layui-layer-btn1').attr({
+                
+              });
+            }
+          });
+        }
+        ,offset: function(othis){
+          var type = othis.data('type')
+          ,text = othis.text();
+        }
+      };
+      
+      $('#layerDemo .layui-btn').on('click', function(){
+        var othis = $(this), method = othis.data('method');
+        active[method] ? active[method].call(this, othis) : '';
+      });
+    });
+    </script>
+
+
+</body>
+</html>

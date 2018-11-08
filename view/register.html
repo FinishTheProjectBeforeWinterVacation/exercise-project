@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../resource/layui/css/layui.css"  media="all">
+    <link rel="stylesheet" href="../resource/css/basic.css"/>
+    <link href="../resource/css/login.css" rel="stylesheet" type="text/css">
+    <style>
+      .baojian{
+        position:absolute;
+        right: 0px;
+        top:0px;
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+</head>
+
+<body>
+
+<div class="login-boxtitle">
+    <a href="index.html"><img alt="" src="../resource/image\AC-Logo.png"/></a>
+</div>
+
+<div class="res-banner">
+    <div class="res-main">
+        <div class="login-banner-bg"><span>&nbsp;</span></br>
+        </br>
+            
+          <div class="layui-carousel" id="test10">
+          <div carousel-item="">
+            <div><img src="../resource/image/8.jpg" weight="600" height="400"></div>
+            <div><img src="../resource/image/2.jpg" weight="600" height="400"></div>
+            <div><img src="../resource/image/9.jpg" ></div>
+            <div><img src="../resource/image/4.jpg" weight="600" height="400"></div>
+            <div><img src="../resource/image/5.jpg" weight="600" height="400"></div>
+            <div><img src="../resource/image/6.jpg" weight="600" height="400"></div>
+            <div><img src="../resource/image/7.jpg" weight="600" height="400"></div>
+          </div>
+          </div>
+        </div>
+        <div class="login-box">
+            <div class="mr-tabs" id="doc-my-tabs">
+                <ul class="mr-tabs-nav mr-nav mr-nav-tabs mr-nav-justify">
+                    <li class="mr-active"><a href="">注册</a></li>
+                </ul>
+
+                <div class="mr-tabs-bd">
+                    <div class="mr-tab-panel mr-active">
+                        <form method="post" name="myform" id="myform">
+
+                            <div class="user-email">
+                          
+                               
+                                  <label for="email"><i class="mr-icon-envelope-o"></i></label>
+
+                                  <input value="" type="email" name="" id="email" placeholder="请输入邮箱账号"  onblur="checkEmpNo()">
+                                  
+                                  <div class="baojian">
+                                        <label id="emp_no_tip" class="control-label" style="color:red"></label>
+
+                                  </div>
+                                  
+                               
+                                
+                                
+                            </div>
+                            <div class="user-pass">
+                                <label for="password"><i class="mr-icon-lock"></i></label>
+                                <input type="password" name="" id="password" placeholder="设置密码" onblur="checkpassword()">
+                                <div class="baojian">
+                                        <label id="emp_no_password" class="control-label" style="color:red"></label>
+
+                                  </div>
+                            </div>
+                            <div class="user-pass">
+                                <label for="passwordRepeat"><i class="mr-icon-lock"></i></label>
+                                <input type="password" name="" id="passwordRepeat" placeholder="确认密码" onblur="checkpasswords()">
+                                <div class="baojian">
+                                        <label id="emp_no_passwords" class="control-label" style="color:red"></label>
+
+                                  </div>
+                            </div>
+
+                            <div class="user-pass">
+                                <label for="passwordRepeat"><i class="mr-icon-mobile"></i><span style="color:red;margin-left:5px">*</span></label>
+                                <input type="text" name="" id="tel" placeholder="请输入手机号" onblur="checkEmpTelNum()">
+                                <div class="baojian">
+                                        <label id="emp_no_phone" class="control-label" style="color:red"></label>
+
+                                  </div>
+                            </div>
+
+                        </form>
+
+                        <div class="login-links">
+                            <label for="reader-me">
+                                <input id="reader-me" type="checkbox"> 点击表示您同意商城《服务协议》
+
+                            </label>
+                            <a href="login.html" class="mr-fr">登录</a>
+                        </div>
+                        <div class="mr-cf">
+                            <input type="submit" name="" onclick="return checkAll()"  value="注册" class="mr-btn mr-btn-primary mr-btn-sm mr-fl">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+   <div class="footer ">
+    <div class="footer-bd ">
+        <p>
+            <a href="http://www.xiyou.edu.cn/">合作伙伴</a>
+            <a href="https://www.amap.com/">网站地图</a>
+            <em>@软件1603班第三组 版权所有@</em>
+        </p>
+    </div>
+</div>
+
+</body>
+<script src="../resource/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript">
+window.onload = function() {
+  document.getElementById("myform").reset()
+}
+    // function mr_verify(){
+
+    //     //获取表单对象
+    //     var email=document.getElementById("email");
+    //     var password=document.getElementById("password");
+    //     var passwordRepeat=document.getElementById("passwordRepeat");
+    //     var tel=document.getElementById("tel");
+
+    //     //验证项目是否为空
+    //     if(email.value==='' || email.value===null){
+    //         alert("邮箱不能为空！");
+    //         return;
+    //     }
+    //     if(password.value==='' || password.value===null){
+    //         alert("密码不能为空！");
+    //         return;
+    //     }
+    //     if(passwordRepeat.value==='' || passwordRepeat.value===null){
+    //         alert("确认密码不能为空！");
+    //         return;
+    //     }
+    //     if(tel.value==='' || tel.value===null){
+    //         alert("手机号码不能为空！");
+    //         return;
+    //     }
+
+    //     if(password.value!==passwordRepeat.value ){
+    //         alert("密码设置前后不一致！");
+    //         return;
+    //     }
+    //     //验证邮件格式
+    //     apos = email.value.indexOf("@")
+    //     dotpos = email.value.lastIndexOf(".")
+    //     if (apos < 1 || dotpos - apos < 2) {
+    //         alert("邮箱格式错误！");
+    //     }
+    //     else {
+    //         alert("邮箱格式正确！");
+    //     }
+
+    //     //验证手机号格式
+    //     if(isNaN(tel.value)){
+    //         alert("手机号请输入数字！");
+    //         return;
+    //     }
+    //     if(tel.value.length!==11){
+    //         alert("手机号是11个数字！");
+    //         return;
+    //     }
+
+    //     alert('注册成功！');
+
+    // }
+
+function checkEmpNo()
+{
+    var reg=/^([a-zA-Z0-9_-])+@[a-zA-Z0-9_-]+((\.[a-zA-Z]{2,8}){1,2})$/;
+    var email_no=document.myform.email;
+    if(!reg.test(email_no.value))
+    {
+        document.getElementById("emp_no_tip").innerHTML="<img src='../resource/image/error.png'>";
+        // email_no.focus();
+        return false;
+    }
+    else
+    {
+        document.getElementById("emp_no_tip").innerHTML="<img src='../resource/image/right.png'>";
+        return true;
+    }
+}
+function checkpassword()
+{
+   var reg=/^([a-zA-Z0-9]){6,20}$/;
+    var emp_name=document.myform.password;
+    if(!reg.test(emp_name.value))
+    {
+        document.getElementById("emp_no_password").innerHTML="<img src='../resource/image/error.png'>";
+        emp_name.focus();
+        return false;
+    }
+    else
+    {
+        document.getElementById("emp_no_password").innerHTML="<img src='../resource/image/right.png'>";
+        return true;
+    }
+}
+function checkpasswords()
+{
+    var reg=/^([a-zA-Z0-9]){6,20}$/;
+    var emp_tel_num=document.myform.passwordRepeat;
+    if(!reg.test(emp_tel_num.value))
+    {
+        document.getElementById("emp_no_passwords").innerHTML="<img src='../resource/image/error.png'>";
+        emp_tel_num.focus();
+        return false;
+    }
+    else
+    {
+        document.getElementById("emp_no_passwords").innerHTML="<img src='../resource/image/right.png'>";
+        return true;
+    }
+}
+function checkEmpTelNum()
+{
+    var reg=/^(1[1-9][0-9]{9})$/;
+    var emp_addr=document.myform.tel;
+    if(!reg.test(emp_addr.value))
+    {
+        document.getElementById("emp_no_phone").innerHTML="<img src='../resource/image/error.png'>";
+        emp_addr.focus();
+        return false;
+    }
+    else
+    {
+        document.getElementById("emp_no_phone").innerHTML="<img src='../resource/image/right.png'>";
+        return true;
+    }
+}
+// function checkEmpEmail()
+// {
+//     var reg=/^([a-zA-Z0-9_-])+@[a-zA-Z0-9_-]+((\.[a-z]{2,3}){1,2})$/;
+//     var emp_email=document.myform.emp_email;
+//     if(!reg.test(emp_email.value))
+//     {
+//         document.getElementById("emp_email_tip").innerHTML="<img src='images/error.png'>请输入正确格式Email!";
+//         emp_email.focus();
+//         return false;
+//     }
+//     else
+//     {
+//         document.getElementById("emp_email_tip").innerHTML="<img src='images/right.png'>";
+//         return true;
+//     }
+// }
+function checkAll()
+{
+    if(!checkEmpNo() || !checkpassword() || !checkpasswords() || !checkEmpTelNum())
+        return false;
+    else
+        return true;
+}
+
+
+    layui.use(['carousel', 'form'], function(){
+  var carousel = layui.carousel
+  ,form = layui.form;
+  
+  //常规轮播
+  carousel.render({
+    elem: '#test1'
+    ,arrow: 'always'
+  });
+  
+  //改变下时间间隔、动画类型、高度
+  carousel.render({
+    elem: '#test2'
+    ,interval: 3000
+    ,anim: 'fade'
+    ,height: '120px'
+  });
+  
+  //设定各种参数
+  var ins3 = carousel.render({
+    elem: '#test3'
+  });
+  //图片轮播
+  carousel.render({
+    elem: '#test10'
+    ,width: '550px'
+    ,height: '400px'
+    ,interval: 3000
+  });
+  
+  //事件
+  carousel.on('change(test4)', function(res){
+    console.log(res)
+  });
+  
+  var $ = layui.$, active = {
+    set: function(othis){
+      var THIS = 'layui-bg-normal'
+      ,key = othis.data('key')
+      ,options = {};
+      
+      othis.css('background-color', '#5FB878').siblings().removeAttr('style'); 
+      options[key] = othis.data('value');
+      ins3.reload(options);
+    }
+  };
+  
+  //监听开关
+  form.on('switch(autoplay)', function(){
+    ins3.reload({
+      autoplay: this.checked
+    });
+  });
+  
+  $('.demoSet').on('keyup', function(){
+    var value = this.value
+    ,options = {};
+    if(!/^\d+$/.test(value)) return;
+    
+    options[this.name] = value;
+    ins3.reload(options);
+  });
+  
+  //其它示例
+  $('.demoTest .layui-btn').on('click', function(){
+    var othis = $(this), type = othis.data('type');
+    active[type] ? active[type].call(this, othis) : '';
+  });
+});
+</script>
+</html>
